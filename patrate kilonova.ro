@@ -1,0 +1,25 @@
+#include <fstream>
+using namespace std;
+ifstream cin("patrate.in");
+ofstream cout("patrate.out");
+int main()
+{
+    int m,c;
+    cin>>c;
+    cin>>m;
+    if(c==1)
+    {
+        cout<<m*8;
+    }
+    else if(c==2)
+    {
+        int T=1;
+        for(;; T++)
+        {
+            if( 4*T*(T-1)+1 <=m && m<= 4*T*(T+1) ) break;
+        }
+        cout<<T;
+    }
+
+    return 0;
+}
